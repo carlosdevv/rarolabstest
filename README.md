@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
+  <h3 align="center">RaroLabs React Test</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    Teste Tecnico para RaroLabs
+  </p>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+<details open="open">
+  <summary>Conteudo</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Sobre o Projeto</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#usage">Usage</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+## Sobre o Projeto
+
+Esse teste tem como objetivo customizar um componente de Tags em ReactJs.
+<br/><br/>
+
+Segue o escopo:
+
+Customização do componente de TagsInput.
+os seguintes requisitos precisam ser implementados em seu novo componente:
+
+1. somente tags com email válidos poderão ser aceitos pelo input.
+2. ao digitar um e-mail válido e pressionar tab, o sistema deverá criar uma nova tag.
+3. se o usuário inserir diversos emails válidos separados por ;, estes diversos e-mails deverão ser transformados em tags. Texto inválido será ignorado nesta modalidade.
+
+no bloco abaixo, segue um teste de unidade implementado para este componente. Ele foi escrito utilizando as bibliotecas jest e @testing-library/react, que são comuns em projetos react. Para completar esta questão, você deve:
+
+1. Fazer o primeiro teste, já implementado, passar
+2. Escrever o conteúdo segundo teste, que está somente enunciado.
+3. Escrever ao menos outros dois testes que contemplem os requisitos citados acima.
+
+
+### Feito em
+
+* [ReactJS]
+* [Javacript]
+
+
+## Getting Started
+
+### Pre-requisitos
+
+Instalar todas dependencias:
+* yarn
+  ```sh
+  yarn install
+  ```
+  
+
+### Uso
+
+No diretório do projeto, execute:
+
+```sh
+  yarn start
+  ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Contato
 
-### `yarn test`
+Carlos Lopes - (https://twitter.com/tiko_lo) - carloslopessf@gmail.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project Link: [https://github.com/carlosdevv/gavanApp](https://github.com/carlosdevv/rarolabstest)
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
