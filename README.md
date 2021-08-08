@@ -13,7 +13,7 @@ Esse teste tem como objetivo customizar um componente de Tags em ReactJs.
 <br/><br/>
 
 Dificuldades no teste:<br/>
-Tive uma dificuldade em solucionar um bug de renderização. Ao clicar no botão "show emails", deve-se renderizar os emails validados no input, porém<br/>
+Tive uma dificuldade em solucionar um bug de renderização. Ao clicar no botão "show emails", deve-se renderizar os emails validados no input, porém
 quando eu insiro emails utilizando o ";" o input valida normalmente os emails, é adicionado na lista também, porém ele não renderiza esses emails na tela.<br/>
 Só renderiza quando insiro emails normalmente sem o ";" ou quando aperto no botão "show emails" novamente ou apago um email.<br/>
 Acredito ser um bug no .map na hora de renderizar os emails adicionados. Mas, por fim, nao consegui resolver esse bug :(
