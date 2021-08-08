@@ -1,10 +1,10 @@
+/* eslint-disable no-useless-escape */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Downshift from "downshift";
-import validator from "validator";
 
 const useStyles = makeStyles((theme) => ({
   chip: {
@@ -27,7 +27,7 @@ export default function TagsInput({ ...props }) {
   }, [selectedItem, selectedTags]);
 
   function handleKeyDown(event) {
-    if (event.key === "Tab") {
+    if (event.key === "Enter") {
       const newSelectedItem = [...selectedItem];
       const duplicatedValues = newSelectedItem.indexOf(
         event.target.value.trim()
@@ -45,7 +45,7 @@ export default function TagsInput({ ...props }) {
         for (let index = 0; index < array.length; index++) {
           if (
             list.indexOf(array[index]) === -1 &&
-            !validator.isEmail(inputValue)
+            validateEmail(array[index])
           ) {
             list.push(array[index]);
           }
@@ -53,7 +53,7 @@ export default function TagsInput({ ...props }) {
         setSelectedItem(list);
         selectedTags(list);
       } else {
-        if (!validator.isEmail(inputValue)) {
+        if (!validateEmail(inputValue)) {
           setInputValue("");
           return;
         }
@@ -80,6 +80,13 @@ export default function TagsInput({ ...props }) {
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
+  }
+
+  function validateEmail(email) {
+    //expression regular to validade email.
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
   }
 
   return (

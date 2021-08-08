@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import ReactDOM from "react-dom";
 import TagsInput from "./TagsInput";
 import Button from "@material-ui/core/Button";
@@ -9,17 +9,17 @@ function InputFieldWithChip() {
 
   function handleSelecetedTags(items) {
     setEmailList(items);
+    console.log("emailList:" + emailList);
   }
 
   function handleShowEmails() {
-    setIsPressed(true);
+    setIsPressed(!isPressed);
   }
 
   return (
     <div className="App">
       <TagsInput
         selectedTags={handleSelecetedTags}
-        fullWidth
         variant="outlined"
         id="tags"
         name="emails"
@@ -33,9 +33,9 @@ function InputFieldWithChip() {
       </Button>
 
       {emailList && isPressed ? (
-        emailList.map((item, index) => {
+        emailList.map((item) => {
           return (
-            <ul key={index}>
+            <ul key={item}>
               <li>{item}</li>
             </ul>
           );
