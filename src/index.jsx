@@ -32,6 +32,13 @@ function InputFieldWithChip() {
         Show Emails
       </Button>
 
+      {/* Chequei no console.log e a lista está atualizando normalmente, porém
+      parece que o .map buga quando insiro email's no input utilizando ";" e nao
+      renderiza na tela os email's, só quando aperto no botão novamente ou apago
+      ou insiro um novo email sem utilizar o ";". É estranho por que os emails
+      estão na lista, ele so nao renderiza na hora. Enfim, não consegui solucionar
+      esse bug :(
+       */}
       {emailList && isPressed ? (
         emailList.map((item) => {
           return (
